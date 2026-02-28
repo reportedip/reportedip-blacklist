@@ -1,0 +1,21 @@
+{
+    "meta": {
+        "exportVersion": "v2026.02.28.212308",
+        "generatedAt": "2026-02-28T21:23:08+00:00",
+        "source": "ReportedIP Service",
+        "totalIPs": 0,
+        "dynamicCount": 0,
+        "curatedCount": 0,
+        "thematicStats": {
+            "spam": 0,
+            "brute-force": 0,
+            "web-attacks": 0,
+            "malware": 0,
+            "ddos": 0,
+            "fraud": 0,
+            "infrastructure": 0,
+            "apt": 0
+        }
+    },
+    "entries": []
+}
