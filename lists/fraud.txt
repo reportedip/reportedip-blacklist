@@ -4,9 +4,9 @@
 # IMPORTANT: Data is delayed by 48 hours.
 # For real-time threat intelligence via API, contact: 1@reportedip.de
 #
-# Generated: 2026-03-02T04:06:39+00:00
+# Generated: 2026-03-03T04:10:14+00:00
 # Total IPs: 2
 #
 
+204.76.203.8
 43.165.65.75
-95.215.0.144
