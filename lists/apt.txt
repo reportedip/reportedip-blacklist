@@ -1,11 +1,14 @@
 # ReportedIP Blacklist - APT
 # https://reportedip.de
 #
+# Copyright (c) 2026 ReportedIP / Patrick Schlesinger
+# Licensed under CC BY 4.0 - https://creativecommons.org/licenses/by/4.0/
+#
 # IMPORTANT: Data is delayed by 48 hours.
 # For real-time threat intelligence via API, contact: 1@reportedip.de
 #
-# Generated: 2026-03-04T04:38:51+00:00
-# Total IPs: 210
+# Generated: 2026-03-04T07:43:25+00:00
+# Total IPs: 212
 #
 
 102.244.97.186
@@ -45,6 +48,7 @@
 162.216.149.80
 162.216.150.103
 162.216.150.130
+162.216.150.133
 162.216.150.176
 162.216.150.178
 162.216.150.32
@@ -170,6 +174,7 @@
 35.203.211.22
 35.203.211.58
 35.205.235.254
+35.233.5.189
 35.233.96.173
 35.240.115.119
 35.240.65.85

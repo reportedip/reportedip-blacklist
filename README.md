@@ -190,6 +190,8 @@ Fehlerhafte Eintraege melden oder eine IP melden / Report a false positive or re
 
 ## Lizenz / License
 
+Copyright (c) 2026 ReportedIP / Patrick Schlesinger
+
 Dieses Werk ist lizenziert unter der [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 
 This work is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).

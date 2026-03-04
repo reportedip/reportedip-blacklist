@@ -1,21 +1,21 @@
 {
     "meta": {
-        "exportVersion": "v2026.03.04.043851",
-        "generatedAt": "2026-03-04T04:38:51+00:00",
+        "exportVersion": "v2026.03.04.074325",
+        "generatedAt": "2026-03-04T07:43:25+00:00",
         "source": "ReportedIP Service",
-        "totalIPs": 6144,
-        "dynamicCount": 5846,
+        "totalIPs": 6179,
+        "dynamicCount": 5881,
         "curatedCount": 298,
         "thematicStats": {
-            "spam": 154,
-            "brute-force": 2083,
-            "cms-login": 3678,
-            "web-attacks": 3669,
-            "malware": 1241,
-            "ddos": 501,
+            "spam": 155,
+            "brute-force": 2100,
+            "cms-login": 3700,
+            "web-attacks": 3691,
+            "malware": 1246,
+            "ddos": 503,
             "fraud": 1,
             "infrastructure": 34,
-            "apt": 210
+            "apt": 212
         }
     },
     "entries": [
@@ -1726,6 +1726,17 @@
             "source": "dynamic"
         },
         {
+            "ip": "20.63.80.2",
+            "confidence": 98,
+            "categories": [
+                15,
+                18,
+                31,
+                32
+            ],
+            "source": "dynamic"
+        },
+        {
             "ip": "20.63.83.162",
             "confidence": 98,
             "categories": [
@@ -3333,6 +3344,14 @@
             "source": "dynamic"
         },
         {
+            "ip": "103.179.56.44",
+            "confidence": 97,
+            "categories": [
+                22
+            ],
+            "source": "dynamic"
+        },
+        {
             "ip": "103.179.56.78",
             "confidence": 97,
             "categories": [
@@ -3525,14 +3544,6 @@
             "source": "dynamic"
         },
         {
-            "ip": "103.23.199.128",
-            "confidence": 97,
-            "categories": [
-                22
-            ],
-            "source": "dynamic"
-        },
-        {
             "ip": "103.23.199.154",
             "confidence": 97,
             "categories": [
@@ -3629,6 +3640,14 @@
             "source": "dynamic"
         },
         {
+            "ip": "103.63.25.203",
+            "confidence": 97,
+            "categories": [
+                22
+            ],
+            "source": "dynamic"
+        },
+        {
             "ip": "103.67.78.251",
             "confidence": 97,
             "categories": [
@@ -3686,6 +3705,14 @@
         },
         {
             "ip": "107.173.10.98",
+            "confidence": 97,
+            "categories": [
+                22
+            ],
+            "source": "dynamic"
+        },
+        {
+            "ip": "107.174.203.4",
             "confidence": 97,
             "categories": [
                 22
@@ -3755,9 +3782,10 @@
             "source": "dynamic"
         },
         {
-            "ip": "111.26.79.159",
+            "ip": "111.47.243.219",
             "confidence": 97,
             "categories": [
+                15,
                 22
             ],
             "source": "dynamic"
@@ -4439,6 +4467,14 @@
         },
         {
             "ip": "138.68.177.46",
+            "confidence": 97,
+            "categories": [
+                22
+            ],
+            "source": "dynamic"
+        },
+        {
+            "ip": "139.59.66.22",
             "confidence": 97,
             "categories": [
                 22
@@ -5225,6 +5261,14 @@
             "source": "dynamic"
         },
         {
+            "ip": "172.208.69.47",
+            "confidence": 97,
+            "categories": [
+                22
+            ],
+            "source": "dynamic"
+        },
+        {
             "ip": "172.81.130.114",
             "confidence": 97,
             "categories": [
@@ -5310,6 +5354,14 @@
         },
         {
             "ip": "178.152.102.6",
+            "confidence": 97,
+            "categories": [
+                22
+            ],
+            "source": "dynamic"
+        },
+        {
+            "ip": "178.250.186.91",
             "confidence": 97,
             "categories": [
                 22
@@ -5654,6 +5706,14 @@
                 58,
                 15,
                 55
+            ],
+            "source": "dynamic"
+        },
+        {
+            "ip": "185.216.214.42",
+            "confidence": 97,
+            "categories": [
+                22
             ],
             "source": "dynamic"
         },
@@ -6161,14 +6221,6 @@
             "source": "dynamic"
         },
         {
-            "ip": "201.49.108.245",
-            "confidence": 97,
-            "categories": [
-                22
-            ],
-            "source": "dynamic"
-        },
-        {
             "ip": "201.71.40.44",
             "confidence": 97,
             "categories": [
@@ -6260,6 +6312,14 @@
             "source": "dynamic"
         },
         {
+            "ip": "209.141.43.77",
+            "confidence": 97,
+            "categories": [
+                22
+            ],
+            "source": "dynamic"
+        },
+        {
             "ip": "210.16.168.11",
             "confidence": 97,
             "categories": [
@@ -6285,6 +6345,22 @@
         },
         {
             "ip": "210.79.191.178",
+            "confidence": 97,
+            "categories": [
+                22
+            ],
+            "source": "dynamic"
+        },
+        {
+            "ip": "211.105.129.57",
+            "confidence": 97,
+            "categories": [
+                22
+            ],
+            "source": "dynamic"
+        },
+        {
+            "ip": "211.213.96.171",
             "confidence": 97,
             "categories": [
                 22
@@ -6391,6 +6467,14 @@
             "source": "dynamic"
         },
         {
+            "ip": "218.70.15.246",
+            "confidence": 97,
+            "categories": [
+                22
+            ],
+            "source": "dynamic"
+        },
+        {
             "ip": "218.89.242.115",
             "confidence": 97,
             "categories": [
@@ -6440,6 +6524,14 @@
         },
         {
             "ip": "222.82.253.98",
+            "confidence": 97,
+            "categories": [
+                22
+            ],
+            "source": "dynamic"
+        },
+        {
+            "ip": "23.242.166.38",
             "confidence": 97,
             "categories": [
                 22
@@ -6503,6 +6595,14 @@
             "source": "dynamic"
         },
         {
+            "ip": "27.112.79.120",
+            "confidence": 97,
+            "categories": [
+                22
+            ],
+            "source": "dynamic"
+        },
+        {
             "ip": "27.112.79.97",
             "confidence": 97,
             "categories": [
@@ -6547,14 +6647,6 @@
             "confidence": 97,
             "categories": [
                 31
-            ],
-            "source": "dynamic"
-        },
-        {
-            "ip": "36.112.133.74",
-            "confidence": 97,
-            "categories": [
-                22
             ],
             "source": "dynamic"
         },
@@ -6625,6 +6717,14 @@
         },
         {
             "ip": "39.129.48.98",
+            "confidence": 97,
+            "categories": [
+                22
+            ],
+            "source": "dynamic"
+        },
+        {
+            "ip": "39.129.96.162",
             "confidence": 97,
             "categories": [
                 22
@@ -7187,14 +7287,6 @@
             "source": "dynamic"
         },
         {
-            "ip": "61.28.144.154",
-            "confidence": 97,
-            "categories": [
-                22
-            ],
-            "source": "dynamic"
-        },
-        {
             "ip": "62.171.175.31",
             "confidence": 97,
             "categories": [
@@ -7453,6 +7545,14 @@
             "source": "dynamic"
         },
         {
+            "ip": "9.223.176.221",
+            "confidence": 97,
+            "categories": [
+                22
+            ],
+            "source": "dynamic"
+        },
+        {
             "ip": "91.107.148.29",
             "confidence": 97,
             "categories": [
@@ -7549,6 +7649,14 @@
         },
         {
             "ip": "93.30.44.26",
+            "confidence": 97,
+            "categories": [
+                22
+            ],
+            "source": "dynamic"
+        },
+        {
+            "ip": "94.141.160.79",
             "confidence": 97,
             "categories": [
                 22
@@ -8978,6 +9086,15 @@
             "source": "dynamic"
         },
         {
+            "ip": "34.158.168.101",
+            "confidence": 96,
+            "categories": [
+                15,
+                21
+            ],
+            "source": "dynamic"
+        },
+        {
             "ip": "34.22.151.18",
             "confidence": 96,
             "categories": [
@@ -9360,6 +9477,18 @@
                 20,
                 19,
                 21
+            ],
+            "source": "dynamic"
+        },
+        {
+            "ip": "35.233.5.189",
+            "confidence": 96,
+            "categories": [
+                15,
+                21,
+                19,
+                20,
+                23
             ],
             "source": "dynamic"
         },
@@ -10506,14 +10635,6 @@
             "confidence": 95,
             "categories": [
                 15,
-                22
-            ],
-            "source": "dynamic"
-        },
-        {
-            "ip": "180.164.120.80",
-            "confidence": 95,
-            "categories": [
                 22
             ],
             "source": "dynamic"
@@ -13352,6 +13473,14 @@
             "source": "dynamic"
         },
         {
+            "ip": "144.172.105.11",
+            "confidence": 94,
+            "categories": [
+                15
+            ],
+            "source": "dynamic"
+        },
+        {
             "ip": "144.172.109.24",
             "confidence": 94,
             "categories": [
@@ -15058,6 +15187,14 @@
             "source": "dynamic"
         },
         {
+            "ip": "162.216.149.229",
+            "confidence": 94,
+            "categories": [
+                15
+            ],
+            "source": "dynamic"
+        },
+        {
             "ip": "162.216.149.29",
             "confidence": 94,
             "categories": [
@@ -15624,6 +15761,14 @@
             "source": "dynamic"
         },
         {
+            "ip": "165.154.51.90",
+            "confidence": 94,
+            "categories": [
+                15
+            ],
+            "source": "dynamic"
+        },
+        {
             "ip": "165.154.59.118",
             "confidence": 94,
             "categories": [
@@ -15695,6 +15840,15 @@
         },
         {
             "ip": "165.227.123.153",
+            "confidence": 94,
+            "categories": [
+                15,
+                22
+            ],
+            "source": "dynamic"
+        },
+        {
+            "ip": "165.227.147.2",
             "confidence": 94,
             "categories": [
                 15,
@@ -21047,6 +21201,14 @@
             "source": "dynamic"
         },
         {
+            "ip": "35.203.210.218",
+            "confidence": 94,
+            "categories": [
+                15
+            ],
+            "source": "dynamic"
+        },
+        {
             "ip": "35.203.210.229",
             "confidence": 94,
             "categories": [
@@ -24413,6 +24575,14 @@
             "source": "dynamic"
         },
         {
+            "ip": "91.231.89.113",
+            "confidence": 94,
+            "categories": [
+                15
+            ],
+            "source": "dynamic"
+        },
+        {
             "ip": "91.231.89.178",
             "confidence": 94,
             "categories": [
@@ -26436,6 +26606,14 @@
             "source": "dynamic"
         },
         {
+            "ip": "180.76.176.249",
+            "confidence": 93,
+            "categories": [
+                22
+            ],
+            "source": "dynamic"
+        },
+        {
             "ip": "180.76.184.79",
             "confidence": 93,
             "categories": [
@@ -26824,6 +27002,14 @@
         },
         {
             "ip": "207.34.147.126",
+            "confidence": 93,
+            "categories": [
+                22
+            ],
+            "source": "dynamic"
+        },
+        {
+            "ip": "209.141.52.88",
             "confidence": 93,
             "categories": [
                 22
@@ -27293,6 +27479,15 @@
             "ip": "45.89.63.39",
             "confidence": 93,
             "categories": [
+                22
+            ],
+            "source": "dynamic"
+        },
+        {
+            "ip": "46.151.182.45",
+            "confidence": 93,
+            "categories": [
+                15,
                 22
             ],
             "source": "dynamic"
@@ -30144,6 +30339,15 @@
             "source": "dynamic"
         },
         {
+            "ip": "205.210.31.83",
+            "confidence": 91,
+            "categories": [
+                15,
+                20
+            ],
+            "source": "dynamic"
+        },
+        {
             "ip": "206.168.34.60",
             "confidence": 91,
             "categories": [
@@ -31113,6 +31317,14 @@
             "confidence": 90,
             "categories": [
                 15
+            ],
+            "source": "dynamic"
+        },
+        {
+            "ip": "89.107.99.224",
+            "confidence": 90,
+            "categories": [
+                22
             ],
             "source": "dynamic"
         },
@@ -33092,6 +33304,17 @@
             "source": "dynamic"
         },
         {
+            "ip": "118.193.57.62",
+            "confidence": 88,
+            "categories": [
+                11,
+                18,
+                15,
+                20
+            ],
+            "source": "dynamic"
+        },
+        {
             "ip": "119.167.206.194",
             "confidence": 88,
             "categories": [
@@ -34038,6 +34261,14 @@
             "confidence": "90",
             "categories": [],
             "source": "curated"
+        },
+        {
+            "ip": "147.185.132.157",
+            "confidence": 87,
+            "categories": [
+                15
+            ],
+            "source": "dynamic"
         },
         {
             "ip": "147.185.132.194",
@@ -35764,14 +35995,6 @@
             "source": "dynamic"
         },
         {
-            "ip": "45.207.214.179",
-            "confidence": 86,
-            "categories": [
-                22
-            ],
-            "source": "dynamic"
-        },
-        {
             "ip": "45.78.198.158",
             "confidence": 86,
             "categories": [
@@ -36372,6 +36595,15 @@
             "source": "dynamic"
         },
         {
+            "ip": "162.216.149.156",
+            "confidence": 85,
+            "categories": [
+                15,
+                21
+            ],
+            "source": "dynamic"
+        },
+        {
             "ip": "162.216.149.159",
             "confidence": 85,
             "categories": [
@@ -36753,6 +36985,15 @@
             "categories": [
                 15,
                 20,
+                21
+            ],
+            "source": "dynamic"
+        },
+        {
+            "ip": "198.235.24.69",
+            "confidence": 85,
+            "categories": [
+                15,
                 21
             ],
             "source": "dynamic"
@@ -41281,6 +41522,18 @@
             "source": "dynamic"
         },
         {
+            "ip": "66.132.153.122",
+            "confidence": 82,
+            "categories": [
+                15,
+                20,
+                21,
+                54,
+                4
+            ],
+            "source": "dynamic"
+        },
+        {
             "ip": "72.14.136.58",
             "confidence": 82,
             "categories": [
@@ -42058,6 +42311,15 @@
         },
         {
             "ip": "193.26.115.111",
+            "confidence": 81,
+            "categories": [
+                15,
+                21
+            ],
+            "source": "dynamic"
+        },
+        {
+            "ip": "198.235.24.79",
             "confidence": 81,
             "categories": [
                 15,
@@ -48139,6 +48401,14 @@
             "source": "dynamic"
         },
         {
+            "ip": "199.45.155.109",
+            "confidence": 78,
+            "categories": [
+                15
+            ],
+            "source": "dynamic"
+        },
+        {
             "ip": "20.106.206.76",
             "confidence": 78,
             "categories": [
@@ -48461,14 +48731,6 @@
             "source": "dynamic"
         },
         {
-            "ip": "36.36.198.209",
-            "confidence": 78,
-            "categories": [
-                22
-            ],
-            "source": "dynamic"
-        },
-        {
             "ip": "36.92.104.139",
             "confidence": 78,
             "categories": [
@@ -48607,6 +48869,17 @@
                 4,
                 55,
                 15
+            ],
+            "source": "dynamic"
+        },
+        {
+            "ip": "43.157.22.57",
+            "confidence": 78,
+            "categories": [
+                21,
+                36,
+                54,
+                4
             ],
             "source": "dynamic"
         },
@@ -48862,6 +49135,14 @@
             "confidence": 78,
             "categories": [
                 15
+            ],
+            "source": "dynamic"
+        },
+        {
+            "ip": "82.165.139.5",
+            "confidence": 78,
+            "categories": [
+                22
             ],
             "source": "dynamic"
         },
@@ -51230,6 +51511,14 @@
             "source": "dynamic"
         },
         {
+            "ip": "200.41.207.26",
+            "confidence": 76,
+            "categories": [
+                20
+            ],
+            "source": "dynamic"
+        },
+        {
             "ip": "201.98.127.206",
             "confidence": 76,
             "categories": [
@@ -51950,6 +52239,14 @@
             "source": "dynamic"
         },
         {
+            "ip": "147.185.133.44",
+            "confidence": 75,
+            "categories": [
+                15
+            ],
+            "source": "dynamic"
+        },
+        {
             "ip": "147.185.133.50",
             "confidence": 75,
             "categories": [
@@ -51979,6 +52276,15 @@
             "categories": [
                 15,
                 20,
+                23
+            ],
+            "source": "dynamic"
+        },
+        {
+            "ip": "162.216.150.133",
+            "confidence": 75,
+            "categories": [
+                15,
                 23
             ],
             "source": "dynamic"

@@ -1,11 +1,14 @@
 # ReportedIP Blacklist - Spam
 # https://reportedip.de
 #
+# Copyright (c) 2026 ReportedIP / Patrick Schlesinger
+# Licensed under CC BY 4.0 - https://creativecommons.org/licenses/by/4.0/
+#
 # IMPORTANT: Data is delayed by 48 hours.
 # For real-time threat intelligence via API, contact: 1@reportedip.de
 #
-# Generated: 2026-03-04T04:38:51+00:00
-# Total IPs: 154
+# Generated: 2026-03-04T07:43:25+00:00
+# Total IPs: 155
 #
 
 103.69.193.110
@@ -15,6 +18,7 @@
 118.193.56.235
 118.193.57.185
 118.193.57.218
+118.193.57.62
 118.193.59.10
 118.193.59.142
 118.193.59.15
