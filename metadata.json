@@ -38,7 +38,7 @@
     ],
     "checksums": {
         "blacklist-all.txt": "74ecfb47b294a24ca36d814f155a0de221fef11675fdc14b8216ea911de8c3f6",
-        "blacklist-all.json": "902fdca5a08b9b95286cd64522a5c58ade4b8e8361c3f8ff8ff924887ddbc10c",
+        "blacklist-all.json": "5dad23572418db8fd24b9a9e2af56fa2522e4aef7bdb4969cab8b3e6e32583f1",
         "blacklist-all.csv": "5335018988531b2e94b6521f49f73240d6c9d19db8e8f2b46cc2e3a2f2acc507",
         "lists/spam.txt": "f195363ac4d80ef05f882031f2a1b78c50cbced7e618eb9007062586149cf774",
         "lists/brute-force.txt": "c76c65da75fcfa7db59b8215c08990d0d7bcc7d78bcb748f15ba476549e6af43",
