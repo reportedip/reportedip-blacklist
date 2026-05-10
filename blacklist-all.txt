@@ -8,7 +8,7 @@
 # For real-time threat intelligence via API, contact: 1@reportedip.de
 #
 # Generated: 2026-05-10
-# Total IPs: 13224
+# Total IPs: 13225
 #
 
 1.9.164.197
@@ -814,6 +814,7 @@
 20.14.75.6
 20.14.79.82
 20.14.83.88
+20.14.87.238
 20.14.88.150
 20.14.89.71
 20.14.90.54

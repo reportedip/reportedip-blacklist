@@ -1,20 +1,20 @@
 {
     "meta": {
-        "exportVersion": "v2026.05.10.041021",
-        "generatedAt": "2026-05-10T04:10:21+00:00",
+        "exportVersion": "v2026.05.10.041053",
+        "generatedAt": "2026-05-10T04:10:53+00:00",
         "source": "ReportedIP Service",
-        "totalIPs": 13224,
-        "dynamicCount": 13224,
+        "totalIPs": 13225,
+        "dynamicCount": 13225,
         "curatedCount": 0,
         "thematicStats": {
             "spam": 517,
             "brute-force": 5784,
-            "cms-login": 10293,
-            "web-attacks": 10275,
-            "malware": 5037,
+            "cms-login": 10294,
+            "web-attacks": 10276,
+            "malware": 5038,
             "ddos": 915,
             "fraud": 319,
-            "infrastructure": 1274,
+            "infrastructure": 1275,
             "apt": 1247
         }
     },
@@ -7440,6 +7440,17 @@
             "categories": [
                 14,
                 15,
+                21
+            ],
+            "source": "dynamic"
+        },
+        {
+            "ip": "20.14.87.238",
+            "confidence": 78,
+            "categories": [
+                14,
+                15,
+                20,
                 21
             ],
             "source": "dynamic"

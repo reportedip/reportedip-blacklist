@@ -9,11 +9,11 @@
 # For real-time threat intelligence via API, contact: 1@reportedip.de
 #
 # Generated: 2026-05-10
-# Total IPs: 13224
+# Total IPs: 13225
 #
 
 
-# IPv4 rules (13217 IPs)
+# IPv4 rules (13218 IPs)
 iptables -N REPORTEDIP_BLOCK 2>/dev/null || iptables -F REPORTEDIP_BLOCK
 
 iptables -A REPORTEDIP_BLOCK -s 1.9.164.197 -j DROP
@@ -819,6 +819,7 @@ iptables -A REPORTEDIP_BLOCK -s 20.14.74.238 -j DROP
 iptables -A REPORTEDIP_BLOCK -s 20.14.75.6 -j DROP
 iptables -A REPORTEDIP_BLOCK -s 20.14.79.82 -j DROP
 iptables -A REPORTEDIP_BLOCK -s 20.14.83.88 -j DROP
+iptables -A REPORTEDIP_BLOCK -s 20.14.87.238 -j DROP
 iptables -A REPORTEDIP_BLOCK -s 20.14.88.150 -j DROP
 iptables -A REPORTEDIP_BLOCK -s 20.14.89.71 -j DROP
 iptables -A REPORTEDIP_BLOCK -s 20.14.90.54 -j DROP
