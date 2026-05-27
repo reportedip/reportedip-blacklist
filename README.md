@@ -171,6 +171,31 @@ Merge the content into your `.htaccess` or `httpd.conf`.
 
 ---
 
+## Mehr ReportedIP-Projekte / More ReportedIP projects
+
+Diese Blacklist ist nur ein Baustein der ReportedIP-Plattform. Alle Komponenten sind Open Source und arbeiten ineinander:
+
+This blacklist is one building block of the ReportedIP platform. All components are open source and designed to work together:
+
+| Projekt / Project | Beschreibung / Description | Stack | Lizenz / License |
+|---|---|---|---|
+| **[reportedip-hive](https://github.com/reportedip/reportedip-hive)** | WordPress-Security-Plugin mit 12 Angriffssensoren, 4-Methoden-2FA (TOTP, WebAuthn/FIDO2, E-Mail, SMS), progressivem Blocking und optionalem Community-Threat-Sharing. / WordPress security plugin with 12 attack sensors, 4-method 2FA (TOTP, WebAuthn/FIDO2, email, SMS), progressive blocking and opt-in community threat sharing. | PHP | GPL-2.0-or-later |
+| **[reportedip-hive-light](https://github.com/reportedip/reportedip-hive-light)** | Schlanker Brute-Force-Schutz fuer WordPress: progressive Sperrdauer (5 Min - 7 Tage), Trusted-Proxy-Header-Whitelist, 3-Tab-Settings. Der schmale Bruder von Hive. / Lightweight WordPress brute-force protection with a progressive lock-duration ladder (5 min - 7 d), trusted-proxy header whitelist and a three-tab settings page. The slim sibling of Hive. | PHP | GPL-2.0-or-later |
+| **[honeypot-server](https://github.com/reportedip/honeypot-server)** | Eigenstaendiger PHP-Honeypot, emuliert WordPress, Drupal und Joomla. 36 Threat-Analyzer melden direkt an die ReportedIP-API und fuettern damit u. a. diese Blacklist. / Standalone PHP honeypot emulating WordPress, Drupal and Joomla. 36 threat analyzers report straight into the ReportedIP API and feed, among other things, this very blacklist. | PHP | BSL 1.1 -> Apache-2.0 (2030) |
+
+So fliessen die Daten zusammen / How the pieces connect:
+
+```
+  Honeypots (honeypot-server)        |
+  WordPress-Sites (hive, hive-light) +--> ReportedIP API --> Reputation-Engine --> reportedip-blacklist (this repo)
+  Community-Reports                  |
+```
+
+Uebersicht aller Repos: **[github.com/reportedip](https://github.com/reportedip)**
+Plattform & API-Docs: **[reportedip.de](https://reportedip.de)**
+
+---
+
 ## Haftungsausschluss / Disclaimer
 
 **Deutsch:** Diese Blacklists werden ohne jegliche Gewaehrleistung bereitgestellt ("as is"). Die Nutzung erfolgt auf eigenes Risiko. Der Betreiber uebernimmt keine Haftung fuer Schaeden, die durch die Verwendung dieser Listen entstehen. Es liegt in der Verantwortung des Nutzers, die Daten vor dem Einsatz in Produktionsumgebungen zu pruefen und zu validieren.
