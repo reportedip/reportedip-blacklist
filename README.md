@@ -5,10 +5,10 @@ Community-driven IP threat intelligence, updated daily.
 **[https://reportedip.com](https://reportedip.com)**
 
 > **Die hier veroeffentlichten Daten haben eine Verzoegerung von 48 Stunden gegenueber dem Live-System.**
-> Fuer Echtzeit-Bedrohungsdaten per API wenden Sie sich an: **1@reportedip.de**
+> Fuer Echtzeit-Bedrohungsdaten per API wenden Sie sich an: **1@reportedip.com**
 >
 > **The data published here is delayed by 48 hours compared to the live system.**
-> For real-time threat intelligence via API, contact: **1@reportedip.de**
+> For real-time threat intelligence via API, contact: **1@reportedip.com**
 
 ---
 

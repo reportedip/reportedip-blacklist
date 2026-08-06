@@ -1,21 +1,21 @@
 {
     "meta": {
-        "exportVersion": "v2026.08.06.130954",
-        "generatedAt": "2026-08-06T13:09:54+00:00",
+        "exportVersion": "v2026.08.06.131246",
+        "generatedAt": "2026-08-06T13:12:46+00:00",
         "source": "ReportedIP Service",
-        "totalIPs": 21094,
-        "dynamicCount": 21094,
+        "totalIPs": 21096,
+        "dynamicCount": 21096,
         "curatedCount": 0,
         "thematicStats": {
-            "spam": 866,
+            "spam": 867,
             "brute-force": 10283,
-            "cms-login": 18472,
-            "web-attacks": 16980,
-            "malware": 7912,
+            "cms-login": 18474,
+            "web-attacks": 16982,
+            "malware": 7911,
             "ddos": 2095,
             "fraud": 650,
             "infrastructure": 3845,
-            "apt": 2041
+            "apt": 2042
         }
     },
     "entries": [
@@ -28413,6 +28413,14 @@
             "source": "dynamic"
         },
         {
+            "ip": "35.203.210.38",
+            "confidence": 84,
+            "categories": [
+                15
+            ],
+            "source": "dynamic"
+        },
+        {
             "ip": "35.203.210.40",
             "confidence": 86,
             "categories": [
@@ -28643,6 +28651,16 @@
             "confidence": 87,
             "categories": [
                 15
+            ],
+            "source": "dynamic"
+        },
+        {
+            "ip": "35.203.210.94",
+            "confidence": 85,
+            "categories": [
+                15,
+                11,
+                23
             ],
             "source": "dynamic"
         },
@@ -98740,15 +98758,6 @@
             "source": "dynamic"
         },
         {
-            "ip": "103.21.55.206",
-            "confidence": 88,
-            "categories": [
-                15,
-                20
-            ],
-            "source": "dynamic"
-        },
-        {
             "ip": "103.23.198.86",
             "confidence": 96,
             "categories": [
@@ -140878,6 +140887,14 @@
         },
         {
             "ip": "152.32.140.206",
+            "confidence": 94,
+            "categories": [
+                15
+            ],
+            "source": "dynamic"
+        },
+        {
+            "ip": "152.32.141.98",
             "confidence": 94,
             "categories": [
                 15

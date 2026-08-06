@@ -8,7 +8,7 @@
 # For real-time threat intelligence via API, contact: 1@reportedip.de
 #
 # Generated: 2026-08-06
-# Total IPs: 21094
+# Total IPs: 21096
 #
 
 <RequireAll>
@@ -2851,6 +2851,7 @@
     Require not ip 35.203.210.32
     Require not ip 35.203.210.35
     Require not ip 35.203.210.36
+    Require not ip 35.203.210.38
     Require not ip 35.203.210.40
     Require not ip 35.203.210.41
     Require not ip 35.203.210.43
@@ -2878,6 +2879,7 @@
     Require not ip 35.203.210.89
     Require not ip 35.203.210.90
     Require not ip 35.203.210.93
+    Require not ip 35.203.210.94
     Require not ip 35.203.210.96
     Require not ip 35.203.210.99
     Require not ip 35.203.210.100
@@ -10082,7 +10084,6 @@
     Require not ip 103.20.122.54
     Require not ip 103.20.223.20
     Require not ip 103.20.223.56
-    Require not ip 103.21.55.206
     Require not ip 103.23.198.86
     Require not ip 103.23.198.128
     Require not ip 103.23.198.220
@@ -14421,6 +14422,7 @@
     Require not ip 152.32.140.12
     Require not ip 152.32.140.22
     Require not ip 152.32.140.206
+    Require not ip 152.32.141.98
     Require not ip 152.32.141.154
     Require not ip 152.32.141.199
     Require not ip 152.32.141.202
