@@ -8,7 +8,7 @@
 # For real-time threat intelligence via API, contact: 1@reportedip.de
 #
 # Generated: 2026-08-06
-# Total IPs: 21096
+# Total IPs: 21094
 #
 
 <RequireAll>
@@ -2927,6 +2927,7 @@
     Require not ip 35.203.210.182
     Require not ip 35.203.210.183
     Require not ip 35.203.210.186
+    Require not ip 35.203.210.189
     Require not ip 35.203.210.190
     Require not ip 35.203.210.192
     Require not ip 35.203.210.193
@@ -6708,7 +6709,6 @@
     Require not ip 52.165.81.251
     Require not ip 52.165.81.253
     Require not ip 52.165.82.22
-    Require not ip 52.165.82.26
     Require not ip 52.165.89.103
     Require not ip 52.165.89.126
     Require not ip 52.165.90.3
@@ -9314,7 +9314,6 @@
     Require not ip 91.230.168.151
     Require not ip 91.230.168.216
     Require not ip 91.230.168.221
-    Require not ip 91.230.168.254
     Require not ip 91.231.89.10
     Require not ip 91.231.89.79
     Require not ip 91.231.89.84
@@ -14022,7 +14021,6 @@
     Require not ip 147.185.132.237
     Require not ip 147.185.132.242
     Require not ip 147.185.132.250
-    Require not ip 147.185.132.251
     Require not ip 147.185.132.252
     Require not ip 147.185.132.253
     Require not ip 147.185.133.1
@@ -14092,7 +14090,6 @@
     Require not ip 147.185.133.159
     Require not ip 147.185.133.160
     Require not ip 147.185.133.164
-    Require not ip 147.185.133.167
     Require not ip 147.185.133.169
     Require not ip 147.185.133.170
     Require not ip 147.185.133.172
@@ -19170,6 +19167,7 @@
     Require not ip 195.184.76.40
     Require not ip 195.184.76.41
     Require not ip 195.184.76.46
+    Require not ip 195.184.76.171
     Require not ip 195.184.76.248
     Require not ip 195.184.76.250
     Require not ip 195.184.76.253
