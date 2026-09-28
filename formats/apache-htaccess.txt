@@ -10,7 +10,7 @@
 #            API       https://reportedip.com/products/api/
 #
 # Generated: 2026-09-28
-# Total IPs: 7011
+# Total IPs: 6995
 #
 
 <RequireAll>
@@ -1074,7 +1074,6 @@
     Require not ip 45.140.42.24
     Require not ip 45.142.193.164
     Require not ip 45.145.74.61
-    Require not ip 45.148.10.5
     Require not ip 45.148.10.9
     Require not ip 45.148.10.28
     Require not ip 45.148.10.40
@@ -1601,7 +1600,6 @@
     Require not ip 69.5.169.44
     Require not ip 69.5.169.45
     Require not ip 69.5.169.46
-    Require not ip 69.5.169.47
     Require not ip 69.5.169.48
     Require not ip 69.5.169.49
     Require not ip 69.5.169.50
@@ -2609,6 +2607,7 @@
     Require not ip 91.196.152.63
     Require not ip 91.196.152.66
     Require not ip 91.196.152.67
+    Require not ip 91.196.152.73
     Require not ip 91.196.152.87
     Require not ip 91.196.152.92
     Require not ip 91.196.152.93
@@ -2620,7 +2619,6 @@
     Require not ip 91.196.152.111
     Require not ip 91.196.152.119
     Require not ip 91.196.152.121
-    Require not ip 91.196.152.124
     Require not ip 91.196.152.126
     Require not ip 91.196.152.127
     Require not ip 91.196.152.144
@@ -2628,6 +2626,7 @@
     Require not ip 91.196.152.188
     Require not ip 91.196.152.193
     Require not ip 91.196.152.195
+    Require not ip 91.196.152.198
     Require not ip 91.196.152.201
     Require not ip 91.196.152.203
     Require not ip 91.196.152.216
@@ -2645,8 +2644,6 @@
     Require not ip 91.224.92.135
     Require not ip 91.230.121.134
     Require not ip 91.230.168.2
-    Require not ip 91.230.168.3
-    Require not ip 91.230.168.9
     Require not ip 91.230.168.11
     Require not ip 91.230.168.12
     Require not ip 91.230.168.13
@@ -2749,7 +2746,6 @@
     Require not ip 91.231.89.229
     Require not ip 91.231.89.232
     Require not ip 91.231.89.233
-    Require not ip 91.231.89.242
     Require not ip 91.231.89.249
     Require not ip 91.231.89.251
     Require not ip 91.231.89.253
@@ -2844,7 +2840,6 @@
     Require not ip 94.231.206.39
     Require not ip 94.231.206.110
     Require not ip 94.231.206.131
-    Require not ip 94.231.206.155
     Require not ip 94.231.206.157
     Require not ip 94.231.206.159
     Require not ip 94.231.206.206
@@ -4085,7 +4080,6 @@
     Require not ip 136.233.125.156
     Require not ip 136.243.65.145
     Require not ip 136.248.121.226
-    Require not ip 137.63.168.196
     Require not ip 137.74.114.131
     Require not ip 137.74.162.180
     Require not ip 137.83.90.232
@@ -4539,6 +4533,7 @@
     Require not ip 147.185.133.128
     Require not ip 147.185.133.131
     Require not ip 147.185.133.133
+    Require not ip 147.185.133.136
     Require not ip 147.185.133.140
     Require not ip 147.185.133.141
     Require not ip 147.185.133.147
@@ -4683,6 +4678,7 @@
     Require not ip 154.66.107.52
     Require not ip 154.72.204.131
     Require not ip 154.83.15.101
+    Require not ip 154.83.17.226
     Require not ip 154.83.17.239
     Require not ip 154.84.216.147
     Require not ip 154.116.254.157
@@ -6195,7 +6191,6 @@
     Require not ip 194.51.190.248
     Require not ip 194.88.98.83
     Require not ip 194.88.98.84
-    Require not ip 194.88.98.85
     Require not ip 194.88.98.86
     Require not ip 194.88.98.87
     Require not ip 194.88.98.88
@@ -6203,14 +6198,11 @@
     Require not ip 194.88.98.91
     Require not ip 194.88.98.92
     Require not ip 194.88.98.93
-    Require not ip 194.88.98.94
     Require not ip 194.88.98.99
     Require not ip 194.88.98.101
     Require not ip 194.88.98.103
     Require not ip 194.88.98.105
     Require not ip 194.88.98.106
-    Require not ip 194.88.98.107
-    Require not ip 194.88.98.109
     Require not ip 194.88.98.110
     Require not ip 194.88.98.111
     Require not ip 194.88.98.113
@@ -6417,7 +6409,6 @@
     Require not ip 199.45.154.65
     Require not ip 199.45.154.69
     Require not ip 199.45.154.70
-    Require not ip 199.45.154.71
     Require not ip 199.45.154.72
     Require not ip 199.45.154.75
     Require not ip 199.45.154.115
@@ -6939,7 +6930,6 @@
     Require not ip 220.241.162.209
     Require not ip 220.246.183.78
     Require not ip 220.247.200.250
-    Require not ip 220.247.224.226
     Require not ip 220.248.173.137
     Require not ip 220.250.52.101
     Require not ip 221.162.218.85
@@ -6961,10 +6951,8 @@
     Require not ip 223.197.186.7
     Require not ip 223.230.49.49
     Require not ip 2001:8f8:1337:e1e9:e4a5:463d:3207:e744
-    Require not ip 2001:df0:3e80::d4e8:1b1e:e87a:3250
     Require not ip 2001:f40:93f:1cbc:e6d3:1a1c:3f32:a081
     Require not ip 2001:12d0:8020::42
-    Require not ip 2001:1810:4201:175::4:4531:7046
     Require not ip 2001:4451:ada:2500:e19f:5250:c701:9bfa
     Require not ip 2001:448a:20a2:9f20:85a8:fb75:e243:ea79
     Require not ip 2400:adc1:1d8:6400:b1f7:b946:5939:605e
@@ -7010,10 +6998,7 @@
     Require not ip 2a02:587:4712:5c00:cb52:e75e:2516:55d4
     Require not ip 2a02:29b8:dc01:3750:b668:42ff:fe9e:dafc
     Require not ip 2a02:4780:4:9e06::1
-    Require not ip 2a03:4000::5d0:74dd:98ff:fe39:40cd
     Require not ip 2a03:4b80:bb1f:63a0:45f2:42a7:c47f:9c4c
-    Require not ip 2a03:b0c0:3:f0::2:db0b:3000
-    Require not ip 2a03:b0c0:3:f0::2:f627:a000
     Require not ip 2a04:c300:1000::2cf
     Require not ip 2a05:4140:3::4ecc
     Require not ip 2a0f:ca80:b00b:c08::5
@@ -7022,7 +7007,6 @@
     Require not ip 2a0f:ca80:b00b:3141::5
     Require not ip 2a0f:ca80:b00b:5ade::5
     Require not ip 2a0f:ca80:b00b:ce63::5
-    Require not ip 2a14:7c2:12cd::6d2d:5f7b:2405:f48f
     Require not ip 2c0f:f0f8:87b:2200:80b4:f1fd:79e1:244a
     Require not ip 2c0f:f4c0:910a:d281:d05e:9982:b93e:1c0
     Require not ip 2c0f:f830:120:a48:a8c7:3179:bb29:342d
