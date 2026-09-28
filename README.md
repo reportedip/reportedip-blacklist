@@ -1,230 +1,151 @@
 # ReportedIP Blacklist
 
-Community-driven IP threat intelligence, updated daily.
+A daily snapshot of the IP addresses the ReportedIP community currently rates as attackers. Free under CC BY 4.0.
 
-**[https://reportedip.com](https://reportedip.com)**
+> **This repository is a snapshot, not a live feed.** It is rebuilt once a day, and a new address only shows up here 48 hours after its first report. An attacker who started this morning is not in these files yet. To block with current data, take it from the source:
 
-> **Die hier veroeffentlichten Daten haben eine Verzoegerung von 48 Stunden gegenueber dem Live-System.**
-> Fuer Echtzeit-Bedrohungsdaten per API wenden Sie sich an: **1@reportedip.com**
->
-> **The data published here is delayed by 48 hours compared to the live system.**
-> For real-time threat intelligence via API, contact: **1@reportedip.com**
+| You protect | Use | Data | Cost |
+|---|---|---|---|
+| **A WordPress site** | [ReportedIP Hive](https://reportedip.com/products/wordpress-plugin/), the WordPress security plugin | Live reputation lookups against the network, plus 16 local attack sensors, a firewall and 2FA | Free |
+| **A Linux server** (web, mail, FTP, DNS) | [ReportedIP Agent](https://reportedip.com/products/linux-agent/), one static binary | The community list in ipset or nftables, refreshed every 15 minutes, plus detection in your own logs | One server included from Professional |
+| **Your own firewall, SIEM or script** | The [ReportedIP API](https://reportedip.com/products/api/) | `GET /check` per address in real time, `GET /blacklist` as a current list with ETag | `/check` free, 1,000 per day. `/blacklist` from Contributor |
+
+A free account takes a minute: **[reportedip.com/register](https://reportedip.com/register/)**
+
+Use the files in this repository where a daily list is good enough: a lab, a one-off import, research, or a firewall that cannot reach an API.
 
 ---
 
-## Repository-Struktur / Repository Structure
+## Kurz auf Deutsch
+
+Dieses Repository ist ein **täglicher Schnappschuss** der ReportedIP-Blacklist. Neue Angreifer erscheinen hier erst nach 48 Stunden. Für aktuellen Schutz gibt es die Live-Quellen:
+
+- **WordPress:** [ReportedIP Hive](https://reportedip.com/products/wordpress-plugin/), kostenlos, prüft jede Anfrage live gegen das Netzwerk.
+- **Linux-Server:** [ReportedIP Agent](https://reportedip.com/products/linux-agent/), lädt die Liste alle 15 Minuten in ipset oder nftables und meldet Angriffe aus den eigenen Logs.
+- **Eigene Integration:** die [ReportedIP API](https://reportedip.com/products/api/). Einzelprüfungen sind kostenlos, die Live-Liste gibt es ab Contributor.
+
+Die Dateien hier eignen sich für Tests, einmalige Importe, Forschung oder Firewalls ohne API-Zugang.
+
+---
+
+## How an address gets in, and out
+
+- Every address comes from the ReportedIP reputation engine: reports from WordPress sites, Linux servers and honeypots, weighted by age, reporter diversity, severity and honeypot evidence. How the score works: [Confidence score](https://reportedip.com/docs/api/confidence-score/).
+- Only addresses with a confidence score of **75 or higher** are listed.
+- Known legitimate networks (major search engines, CDNs) are excluded.
+- **Addresses leave on their own.** Two weeks after the last report, a score starts to halve every 30 days. An address that stops attacking drops out of this list within a few weeks, and a new report brings it straight back. This is also why the file can shrink from one day to the next.
+- Listed in error? [Request a delisting](https://reportedip.com/docs/support/ip-delisting/).
+
+---
+
+## Files
 
 ```
 reportedip-blacklist/
-├── README.md
-├── LICENSE                         CC BY 4.0
-├── metadata.json                   Version, SHA-256 Checksums, Stats
-│
-├── blacklist-all.txt               All IPs, one per line
-├── blacklist-all.json              All IPs with confidence + categories
-├── blacklist-all.csv               ip, confidence, categories, last_reported
-│
-├── lists/                          Thematic lists
-│   ├── spam.txt                    Web / Email / Blog Spam
-│   ├── brute-force.txt             FTP / SSH / Login Brute-Force
-│   ├── cms-login.txt               WordPress / Drupal / CMS Backend Login
-│   ├── web-attacks.txt             SQLi, Hacking, Bots, WebApp Attacks
-│   ├── malware.txt                 Ransomware, Trojans, Crypto-Mining
-│   ├── ddos.txt                    DDoS, Ping of Death
-│   ├── fraud.txt                   Phishing, Fraud, Spoofing
-│   ├── infrastructure.txt          DNS Abuse, Open Proxy, Port Scan
-│   └── apt.txt                     IoT Botnet, Supply Chain, Zero-Day, APT
-│
-└── formats/                        Firewall-ready configs
-    ├── nginx-deny.conf
-    ├── apache-htaccess.txt
-    └── iptables.sh
+├── blacklist-all.txt        All addresses, one per line
+├── blacklist-all.json       All addresses with confidence and category ids
+├── blacklist-all.csv        ip, confidence, categories, last_reported
+├── lists/                   The same addresses, split by attack type
+├── formats/                 Ready-made nginx, Apache and iptables configs
+├── metadata.json            Version, counts per list, SHA-256 checksums
+└── LICENSE                  CC BY 4.0
 ```
 
----
+### Thematic lists
 
-## Thematische Listen / Thematic Lists
-
-| Datei / File | Beschreibung / Description | Kategorien / Categories |
+| File | Attack type | Category ids |
 |---|---|---|
-| `lists/spam.txt` | Web-, E-Mail- und Blog-Spam / Web, email & blog spam | 10, 11, 12 |
-| `lists/brute-force.txt` | FTP-, SSH- und Login-Brute-Force / FTP, SSH & login brute-force | 5, 18, 22 |
-| `lists/cms-login.txt` | WordPress-, Drupal- und CMS-Backend-Login-Angriffe / WordPress, Drupal & CMS backend login attacks | 5, 15, 18, 19, 21 |
-| `lists/web-attacks.txt` | SQL-Injection, Hacking, Bots, WebApp-Angriffe / SQLi, hacking, bots, web app attacks | 15, 16, 19, 21 |
-| `lists/malware.txt` | Ransomware, Trojaner, Crypto-Mining / Ransomware, trojans, crypto-mining | 20, 24, 25, 26, 27 |
-| `lists/ddos.txt` | DDoS-Angriffe, Ping of Death / DDoS attacks, ping of death | 4, 6 |
-| `lists/fraud.txt` | Phishing, Betrug, Spoofing / Phishing, fraud, spoofing | 3, 7, 8, 17 |
-| `lists/infrastructure.txt` | DNS-Missbrauch, Open Proxy, Port-Scan / DNS abuse, open proxy, port scan | 1, 2, 9, 14 |
-| `lists/apt.txt` | IoT-Botnet, Supply-Chain, Zero-Day, staatliche APT / IoT botnet, supply chain, zero-day, nation-state APT | 23, 28, 29, 30 |
+| `lists/spam.txt` | Web, email and blog spam | 10, 11, 12 |
+| `lists/brute-force.txt` | FTP, SSH and login brute force | 5, 18, 22 |
+| `lists/cms-login.txt` | WordPress, Drupal and CMS backend logins | 5, 15, 18, 19, 21 |
+| `lists/web-attacks.txt` | SQL injection, hacking, bad bots, web app attacks | 15, 16, 19, 21 |
+| `lists/malware.txt` | Ransomware, trojans, crypto mining | 20, 24, 25, 26, 27 |
+| `lists/ddos.txt` | DDoS, ping of death | 4, 6 |
+| `lists/fraud.txt` | Phishing, fraud, spoofing | 3, 7, 8, 17 |
+| `lists/infrastructure.txt` | DNS abuse, open proxy, port scan | 1, 2, 9, 14 |
+| `lists/apt.txt` | IoT botnet, supply chain, zero day, nation-state APT | 23, 28, 29, 30 |
 
-Eine IP kann in mehreren thematischen Listen gleichzeitig erscheinen.
-An IP may appear in multiple thematic lists at the same time.
-
----
-
-## Dateiformate / File Formats
-
-### blacklist-all.txt
-
-Einfache Textdatei, eine IP-Adresse pro Zeile. Kommentare beginnen mit `#`.
-
-Plain text, one IP address per line. Comments start with `#`.
+An address can appear in several lists. All category ids and their names: [Threat categories](https://reportedip.com/docs/api/threat-categories/).
 
 ### blacklist-all.json
 
 ```json
-[
-  {
-    "ip": "1.2.3.4",
-    "confidence": 92,
-    "categories": ["brute-force", "web-attacks"],
-    "last_reported": "2026-02-26T12:00:00+00:00"
-  }
-]
+{
+  "meta": { "totalIPs": 1, "generatedAt": "2026-09-28T04:20:00+00:00" },
+  "entries": [
+    { "ip": "1.2.3.4", "confidence": 92, "categories": [18, 31], "source": "dynamic" }
+  ]
+}
 ```
-
-| Feld / Field | Beschreibung / Description |
-|---|---|
-| `ip` | IPv4- oder IPv6-Adresse bzw. CIDR-Bereich / IPv4 or IPv6 address or CIDR range |
-| `confidence` | Vertrauenswert 0–100 (hoeher = boesartiger) / Confidence score 0–100 (higher = more malicious) |
-| `categories` | Zugehoerige thematische Listen / Associated thematic lists |
-| `last_reported` | Letzter Meldezeitpunkt (ISO 8601) / Last report timestamp (ISO 8601) |
 
 ### blacklist-all.csv
 
 ```
 ip,confidence,categories,last_reported
-1.2.3.4,92,"brute-force;web-attacks",2026-02-26T12:00:00+00:00
+1.2.3.4,92,"18;31","2026-09-28 04:20:00"
 ```
 
-### metadata.json
-
-Enthaelt Versions-Info, Gesamtanzahl, Aufschluesselung pro Liste und SHA-256-Pruefsummen aller Dateien.
-
-Contains version info, total counts, per-list breakdown, and SHA-256 checksums for all files.
+`categories` holds category ids separated by semicolons.
 
 ---
 
-## Verwendung / Usage
-
-### Download
+## Usage
 
 ```bash
-# Alle IPs / All IPs
-wget https://raw.githubusercontent.com/reportedip/reportedip-blacklist/main/blacklist-all.txt
+# All addresses
+curl -sO https://raw.githubusercontent.com/reportedip/reportedip-blacklist/main/blacklist-all.txt
 
-# Nur Brute-Force-IPs / Brute-force IPs only
+# One attack type
 curl -sO https://raw.githubusercontent.com/reportedip/reportedip-blacklist/main/lists/brute-force.txt
-
-# JSON mit Metadaten / JSON with metadata
-curl -s https://raw.githubusercontent.com/reportedip/reportedip-blacklist/main/blacklist-all.json | jq '.[0:5]'
 ```
 
-### iptables (Linux)
+### nginx
 
 ```bash
-wget -q https://raw.githubusercontent.com/reportedip/reportedip-blacklist/main/formats/iptables.sh \
-  -O /tmp/reportedip-block.sh
-chmod +x /tmp/reportedip-block.sh
-sudo /tmp/reportedip-block.sh
-```
-
-### Nginx
-
-```bash
-wget -q https://raw.githubusercontent.com/reportedip/reportedip-blacklist/main/formats/nginx-deny.conf \
-  -O /etc/nginx/conf.d/reportedip-deny.conf
+curl -s https://raw.githubusercontent.com/reportedip/reportedip-blacklist/main/formats/nginx-deny.conf \
+  -o /etc/nginx/conf.d/reportedip-deny.conf
 sudo nginx -t && sudo nginx -s reload
-```
-
-```nginx
-# In Ihrem server-Block / In your server block:
-include /etc/nginx/conf.d/reportedip-deny.conf;
 ```
 
 ### Apache
 
-```bash
-wget -q https://raw.githubusercontent.com/reportedip/reportedip-blacklist/main/formats/apache-htaccess.txt \
-  -O /tmp/reportedip-deny.txt
-```
+Merge `formats/apache-htaccess.txt` into your `.htaccess` or `httpd.conf`.
 
-Fuegen Sie den Inhalt in Ihre `.htaccess` oder `httpd.conf` ein.
-Merge the content into your `.htaccess` or `httpd.conf`.
-
-### Automatische Updates (Cron)
+### iptables
 
 ```bash
-# Taeglich um 04:00 UTC aktualisieren / Update daily at 04:00 UTC
-0 4 * * * wget -q https://raw.githubusercontent.com/reportedip/reportedip-blacklist/main/formats/iptables.sh -O /tmp/reportedip-block.sh && chmod +x /tmp/reportedip-block.sh && /tmp/reportedip-block.sh
+curl -s https://raw.githubusercontent.com/reportedip/reportedip-blacklist/main/formats/iptables.sh -o /tmp/reportedip-block.sh
+sudo sh /tmp/reportedip-block.sh
 ```
 
----
-
-## Datenqualitaet / Data Quality
-
-- Alle IPs stammen aus dem **ReportedIP Community-Reputationssystem** mit Confidence-Score-Berechnung. / All IPs come from the **ReportedIP community reputation system** with confidence score calculation.
-- Nur IPs mit einem Confidence-Score von **>= 75%** werden aufgenommen. / Only IPs with a confidence score of **>= 75%** are included.
-- **Whitelist-Pruefung**: Bekannte legitime IPs (z. B. grosse Suchmaschinen, CDN-Anbieter) werden ausgeschlossen. / **Whitelist check**: Known legitimate IPs (e.g. major search engines, CDN providers) are excluded.
-- **48-Stunden-Verzoegerung**: Neue Meldungen erscheinen erst nach 48 Stunden in diesen Listen, um Fehlalarme zu reduzieren. / **48-hour delay**: New reports appear in these lists only after 48 hours, reducing false positives.
-- **Taegliche Aktualisierung**: Das Repository wird einmal taeglich automatisch aktualisiert. / **Daily updates**: The repository is updated automatically once daily.
+The repository is rebuilt once a day around 04:20 UTC, so pulling more often gains nothing. A cron job that pulls a snapshot is the point where the [ReportedIP Agent](https://reportedip.com/products/linux-agent/) does the same job every 15 minutes, with sets per service and an atomic swap. For a hand-built setup against the live API, see [Network-level blocking](https://reportedip.com/docs/blocking/firewall/).
 
 ---
 
-## Mehr ReportedIP-Projekte / More ReportedIP projects
-
-Diese Blacklist ist nur ein Baustein der ReportedIP-Plattform. Alle Komponenten sind Open Source und arbeiten ineinander:
-
-This blacklist is one building block of the ReportedIP platform. All components are open source and designed to work together:
-
-| Projekt / Project | Beschreibung / Description | Stack | Lizenz / License |
-|---|---|---|---|
-| **[reportedip-hive](https://github.com/reportedip/reportedip-hive)** | WordPress-Security-Plugin mit 16 Angriffssensoren, 4-Methoden-2FA (TOTP, WebAuthn/FIDO2, E-Mail, SMS), progressivem Blocking und optionalem Community-Threat-Sharing. / WordPress security plugin with 18 attack sensors, 4-method 2FA (TOTP, WebAuthn/FIDO2, email, SMS), progressive blocking and opt-in community threat sharing. | PHP | GPL-2.0-or-later |
-| **[reportedip-hive-light](https://github.com/reportedip/reportedip-hive-light)** | Schlanker Brute-Force-Schutz fuer WordPress: progressive Sperrdauer (5 Min - 7 Tage), Trusted-Proxy-Header-Whitelist, 3-Tab-Settings. Der schmale Bruder von Hive. / Lightweight WordPress brute-force protection with a progressive lock-duration ladder (5 min - 7 d), trusted-proxy header whitelist and a three-tab settings page. The slim sibling of Hive. | PHP | GPL-2.0-or-later |
-| **[honeypot-server](https://github.com/reportedip/honeypot-server)** | Eigenstaendiger PHP-Honeypot, emuliert WordPress, Drupal und Joomla. 36 Threat-Analyzer melden direkt an die ReportedIP-API und fuettern damit u. a. diese Blacklist. / Standalone PHP honeypot emulating WordPress, Drupal and Joomla. 36 threat analyzers report straight into the ReportedIP API and feed, among other things, this very blacklist. | PHP | BSL 1.1 -> Apache-2.0 (2030) |
-
-So fliessen die Daten zusammen / How the pieces connect:
+## Where the data comes from
 
 ```
-  Honeypots (honeypot-server)        |
-  WordPress-Sites (hive, hive-light) +--> ReportedIP API --> Reputation-Engine --> reportedip-blacklist (this repo)
-  Community-Reports                  |
+  WordPress sites (ReportedIP Hive)  |
+  Linux servers (ReportedIP Agent)   +-->  ReportedIP API  -->  reputation engine  -->  live API, Agent, Hive
+  Honeypots                          |                                            \-->  this repository (daily)
 ```
 
-Uebersicht aller Repos: **[github.com/reportedip](https://github.com/reportedip)**
-Plattform & API-Docs: **[reportedip.com](https://reportedip.com)**
+Source code on GitHub: [reportedip-hive](https://github.com/reportedip/reportedip-hive), [reportedip-hive-light](https://github.com/reportedip/reportedip-hive-light), [honeypot-server](https://github.com/reportedip/honeypot-server).
 
 ---
 
-## Haftungsausschluss / Disclaimer
+## Disclaimer
 
-**Deutsch:** Diese Blacklists werden ohne jegliche Gewaehrleistung bereitgestellt ("as is"). Die Nutzung erfolgt auf eigenes Risiko. Der Betreiber uebernimmt keine Haftung fuer Schaeden, die durch die Verwendung dieser Listen entstehen. Es liegt in der Verantwortung des Nutzers, die Daten vor dem Einsatz in Produktionsumgebungen zu pruefen und zu validieren.
+These lists are provided as is, without warranty of any kind. Check the data before you use it in production. The operator is not liable for damage caused by using these lists.
 
-**English:** These blacklists are provided as-is, without any warranty of any kind, express or implied. Use at your own risk. The operator assumes no liability for any damages arising from the use of these lists. It is the user's responsibility to review and validate the data before deploying it in production environments.
+Diese Listen werden ohne Gewähr bereitgestellt. Prüfen Sie die Daten vor dem produktiven Einsatz. Der Betreiber haftet nicht für Schäden durch die Nutzung.
 
----
+## Contact
 
-## Kontakt / Contact
+False positive or abuse report: [abuse@reportedip.com](mailto:abuse@reportedip.com) · Website: [reportedip.com](https://reportedip.com)
 
-Fehlerhafte Eintraege melden oder eine IP melden / Report a false positive or report an IP:
+## License
 
-- **E-Mail:** [abuse@reportedip.com](mailto:abuse@reportedip.com)
-- **Web:** [https://reportedip.com](https://reportedip.com)
+Copyright (c) 2026 ReportedIP / Patrick Schlesinger. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). You may share and adapt the data as long as you credit **ReportedIP** ([reportedip.com](https://reportedip.com)).
 
----
-
-## Lizenz / License
-
-Copyright (c) 2026 ReportedIP / Patrick Schlesinger
-
-Dieses Werk ist lizenziert unter der [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
-
-This work is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
-
-Sie duerfen das Material teilen und anpassen, solange Sie **ReportedIP** ([reportedip.com](https://reportedip.com)) als Quelle angeben.
-
-You are free to share and adapt the material, as long as you give appropriate credit to **ReportedIP** ([reportedip.com](https://reportedip.com)).
-
----
-
-*Automatisch generiert von [ReportedIP](https://reportedip.com) am 2026-09-28 / Auto-generated by [ReportedIP](https://reportedip.com) on 2026-09-28*
+*Generated by [ReportedIP](https://reportedip.com) on 2026-09-28.*
