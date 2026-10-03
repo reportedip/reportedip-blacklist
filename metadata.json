@@ -38,8 +38,8 @@
     ],
     "checksums": {
         "blacklist-all.txt": "755436dcdb75a7ad5a13872f4962e0ed57234c06196a52e910f8f31bd03a382b",
-        "blacklist-all.json": "f509557b23f57d66f65f759f2560abcb02d265097ff0f4824418230fe7f92d05",
-        "blacklist-all.csv": "e35769af8ae9141f713bd927fb38c5d53483bcb87f5f2d200594df465fee097f",
+        "blacklist-all.json": "407f71830caf3d6d78f97a7d69c4384124343673bf010231c87766976f7b1ff9",
+        "blacklist-all.csv": "5dd0c7c13c1c4d53684a4ae4c2dfae158deaa76f2cb63cd23e2ab6e72e08b5cf",
         "lists/spam.txt": "bb04b640fdec23f52520ba633a60cbc76bd31aadb46363bcc0ffc6d147284076",
         "lists/brute-force.txt": "31e1afbc533c74e6318ab1375c2b4dadb45df4d20c9e5d6c0e7cc146312d0701",
         "lists/cms-login.txt": "858923031c095b51f7d65f44371e20861700619e5068533ecb3735a0547ed74f",

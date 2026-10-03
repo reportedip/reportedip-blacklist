@@ -1,7 +1,7 @@
 {
     "meta": {
-        "exportVersion": "v2026.10.03.042826",
-        "generatedAt": "2026-10-03T04:28:26+00:00",
+        "exportVersion": "v2026.10.03.043330",
+        "generatedAt": "2026-10-03T04:33:30+00:00",
         "source": "ReportedIP Service",
         "totalIPs": 12873,
         "dynamicCount": 12873,
@@ -31894,7 +31894,7 @@
         },
         {
             "ip": "66.132.186.201",
-            "confidence": 81,
+            "confidence": 82,
             "categories": [
                 14,
                 15,
@@ -93183,7 +93183,7 @@
         },
         {
             "ip": "162.216.150.7",
-            "confidence": 75,
+            "confidence": 76,
             "categories": [
                 15
             ],
@@ -94184,7 +94184,7 @@
         },
         {
             "ip": "162.216.150.159",
-            "confidence": 77,
+            "confidence": 78,
             "categories": [
                 15,
                 23
